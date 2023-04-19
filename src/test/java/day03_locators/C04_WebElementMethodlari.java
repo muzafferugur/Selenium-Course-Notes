@@ -42,7 +42,22 @@ public class C04_WebElementMethodlari {
 
         }else System.out.println("name attribute'nun değeri testi FAILED");
 
+        //konudan bağımsız
+        System.out.println("konum : "+aramaKutusu.getLocation());
+        System.out.println("webelementin yüksekliği :" +aramaKutusu.getSize().height);
+
+
+
 driver.close();
+
+/*
+<input type="text" id="twotabsearchtextbox" value=""
+name="field-keywords" autocomplete="off" placeholder="Search Amazon"
+class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search Amazon" spellcheck="false">
+
+webElementIsmi.getTagName()-->daha önce locate ettiğimiz bir webelemetin tagname'ini döndürür
+webElementIsmi.getAttribute(attributeIsmi)--> daha önce locate ettiğimiz  bir webelemetin istediğim attribute değerini döndürür.
+ */
 
     }
 }
