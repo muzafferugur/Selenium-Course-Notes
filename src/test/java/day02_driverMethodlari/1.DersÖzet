@@ -1,0 +1,11 @@
+1-)Yazılım testi Expected Result ile Actual Result ın kariılaştırılmasından ibarettir.
+2-)Zaten Bug: Yazılımın beklenmeyen davranışıdır.Dolayısıyla bizimi yaptığımz "Bug" bulmak.
+3-)Slenium, browser'ları otomatikleştirir,gerisi size kalmış
+4-)Bir testi otomasyon ile çalıştırmadan önce mutlaka manuel olarak test yapılır. Eğer ekibinizde manuel tester varsa
+ilk yapılacak manuel testi o yapıp adımlarda karşılaştığı problemleri bizimle paylaşır. Yoksa biz manuel test yapıp tüm adımları
+görmeli ve ondan sonra otomasyona dökmeliyiz
+5-)Biz İntelliJ'de çalışıyoruz, farklı IDEler ile de çalışılabilir.
+6-)Biz İntelliJ'de Selenium WebDriver'ı farklı şekillerde yükleyebiliriz. Bu yollardan en ilkel olanı ihtiyacımız olan
+kütüphaneleri manuel olarak ilgili siteden indirip,projemize Java kütüphanesinden
+System.setProperty("webdriver.chorme.driver(kullanacağımız driver)","src/resources/drivers/chromedriver.exe(driverin bilgisayardaki yerini gösteren path)"); methodu ile yükleyebiliriz.
+7-)Selenium ile Web uygulamalarını test ederiz, performans testleri ve captcha selenium ile yapılmaz.
