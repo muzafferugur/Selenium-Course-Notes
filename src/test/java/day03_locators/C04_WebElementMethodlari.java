@@ -38,9 +38,9 @@ public class C04_WebElementMethodlari {
         String actualAttributeName=aramaKutusu.getAttribute("name");
 
         if (expectedAramaKutusuTagName.equals(actualAramaKutusuTagName)){
-            System.out.println("attribute'nun değeri testi PASSED");
+            System.out.println("name attribute'nun değeri testi PASSED");
 
-        }else System.out.println("attribute'nun değeri testi FAILED");
+        }else System.out.println("name attribute'nun değeri testi FAILED");
 
 driver.close();
 
