@@ -1,0 +1,16 @@
+**LOCATE ALMA ŞEKİLLLERİ**
+1-)By.id()-->En çok kullanılan (en güvenli - en hızlı) genelde unique olur
+2-)By.name()-->İsme göre aratıyoruz.Unique ise kullanabiliriz
+3-)By.clasName()-->Burada bilmemiz gereken şey class genelede benzer özellikteki webelementleri gruplandırmak için kullanılır.
+Dolayısıyla classname genelde unique olmaz. Classname boşluk içeriyorsa sağlıklı çalışmaz.
+4-)By.linkText()-->Linkin yazısı.bunu kullanabilmek için webelementin link olması gerekir.Locate alırken öncesinde sonrasında boşluk varsa boşluklu şekilde yazmamız gerekir.(özel karakter varsa da)
+5-)By.partialLinkText()-->LinkText'in parçalı şekilde de kullanabiliriz.Önemli olan unique olmasıdır.
+6-)By.tagName()-->Çok kullanılan bir yöntem değildir. Çok fazla var. İnputu alıyoruz.
+7-)By.xpath()
+8-)By.cssSelector()
+
+
+**findElement()--findElements() Methods**
+findElement() locator değerine uygun bir tane webelementi döndürür.Dönmezse "NoSuchElentException" fıydırır.
+findElements() locator değerine uygun webelementlerin listesini döndürür.Eşleşen yoksa boş liste döndürür. "NoSuchElentException" hatası fıydırmaz.
+
