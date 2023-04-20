@@ -12,8 +12,8 @@ public class C02_DriverMethodlari {
         //öncelikle driver.get() methodunu göreceğiz
         driver.get("https://amazon.com");
 
-        System.out.println("actual title : "+  driver.getTitle()); //==>actual dememizin sebebi benim driver ile aldığım değerler actualdir.
-        System.out.println("actual url : "+ driver.getCurrentUrl());
+        System.out.println("actual title : " + driver.getTitle()); //==>actual dememizin sebebi benim driver ile aldığım değerler actualdir.
+        System.out.println("actual url : " + driver.getCurrentUrl());
         driver.close();//==>bazen sayfada işimizin bittiğini anlamıyoruz bunun için işin bitince kapat komutu
 
 

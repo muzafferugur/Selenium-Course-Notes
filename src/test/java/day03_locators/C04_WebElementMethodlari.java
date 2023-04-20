@@ -16,39 +16,38 @@ public class C04_WebElementMethodlari {
         3- arama kutusunun name attribute'nun değerinin field-keywords olduğunu test edin
          */
 
-        System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         //1- amazon.com a gidip arama kutusunu locate edin
         driver.get("https://amazon.com");
-        WebElement aramaKutusu= driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
 
         //2- arama kutusunun tagname inin input olduğunu test edin
-        String expectedAramaKutusuTagName="input";
-        String actualAramaKutusuTagName=aramaKutusu.getTagName();
+        String expectedAramaKutusuTagName = "input";
+        String actualAramaKutusuTagName = aramaKutusu.getTagName();
 
-        if (expectedAramaKutusuTagName.equals(actualAramaKutusuTagName)){
+        if (expectedAramaKutusuTagName.equals(actualAramaKutusuTagName)) {
             System.out.println("Tagname testi PASSED");
-        }else System.out.println("Tagname testi FAILED");
+        } else System.out.println("Tagname testi FAILED");
 
         //3- arama kutusunun name attribute'nun değerinin field-keywords olduğunu test edin
-        String expectedAttributeName="field-keywords";
-        String actualAttributeName=aramaKutusu.getAttribute("name");
+        String expectedAttributeName = "field-keywords";
+        String actualAttributeName = aramaKutusu.getAttribute("name");
 
-        if (expectedAramaKutusuTagName.equals(actualAramaKutusuTagName)){
+        if (expectedAramaKutusuTagName.equals(actualAramaKutusuTagName)) {
             System.out.println("name attribute'nun değeri testi PASSED");
 
-        }else System.out.println("name attribute'nun değeri testi FAILED");
+        } else System.out.println("name attribute'nun değeri testi FAILED");
 
         //konudan bağımsız
-        System.out.println("konum : "+aramaKutusu.getLocation());
-        System.out.println("webelementin yüksekliği :" +aramaKutusu.getSize().height);
+        System.out.println("konum : " + aramaKutusu.getLocation());
+        System.out.println("webelementin yüksekliği :" + aramaKutusu.getSize().height);
 
 
-
-driver.close();
+        driver.close();
 
 /*
 <input type="text" id="twotabsearchtextbox" value=""

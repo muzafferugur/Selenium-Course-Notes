@@ -29,12 +29,12 @@ public class C03_IlkTest {
         } else System.out.println("Title" + arananKelime + "'yi içermiyor, title testi FAILED.");
 
         //3.adım: Url'nin "https://www.amazon.com" a eşit olduğunu test edelim
-        String actualUrl=driver.getCurrentUrl();                    //==>Aslında olan
-        String expectedUrl="https://www.amazon.com/"; //==>Beklenen
+        String actualUrl = driver.getCurrentUrl();                    //==>Aslında olan
+        String expectedUrl = "https://www.amazon.com/"; //==>Beklenen
 
-        if (actualUrl.equals(expectedUrl)){
+        if (actualUrl.equals(expectedUrl)) {
             System.out.println("Url testi PASSED");
-        }else System.out.println("Actual Url : "+actualUrl +" beklenen url'den farklı, test FAILED.");
+        } else System.out.println("Actual Url : " + actualUrl + " beklenen url'den farklı, test FAILED.");
 
         //4.adım: Sayfayı kapatalım.
         driver.close();
