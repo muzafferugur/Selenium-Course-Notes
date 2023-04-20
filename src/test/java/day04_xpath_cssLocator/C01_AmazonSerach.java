@@ -25,7 +25,7 @@ public class C01_AmazonSerach {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
-        // a. google web sayfasına gidin.https://amazon.com
+        // a. https://amazon.com sayfasına gidin
         driver.get("https://amazon.com");
 
         //  b. Search "city bike"
@@ -41,6 +41,8 @@ public class C01_AmazonSerach {
         List<WebElement> ürünResimleriList = driver.findElements(By.className("s-image"));
         WebElement ilkÜrünResmi = ürünResimleriList.get(0);
         ilkÜrünResmi.click();
+
+        driver.close();
 
 
     }
