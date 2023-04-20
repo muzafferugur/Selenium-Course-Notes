@@ -1,0 +1,12 @@
+*****By.cssSelector() Method*****
+1-)Css selector xpath'e benzer.3 ana tip kullanılır.
+(Xpath'den farkı başındaki ""//" kaldırıyorsun ve attributeİsmi'den önceki ""@" işaretini kaldırıyorsun. )
+
+ı.css=tagName[attribute name='value'];
+-->driver.findElement(By.cssSelector("input[name='session[password]']"));
+
+ıı.css="tagName#idValue" veya sadece css="#idvalue"=> yalnızca id value ile çalışır.
+-->driver.findElement(By.cssSelector("input#session_password"));
+
+ııı. css="tagName.classValue" veya sadece css=".classValue"=>yalnızca class value ile çalışır.
+-->driver.findElement(By.cssSelector(".form-control"));

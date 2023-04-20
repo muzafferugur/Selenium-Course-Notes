@@ -32,3 +32,14 @@ yazım şekli -->//tagname[@attributeIsmi='attributeValue']
 
 --Attribute name farketmeksizin tagname ve attribute value kullanarak xpath yazmak
 -->driver.findElement(By.xpath(""//input[@*='text']"));-->AttributeIsmi yerine (*) koymak yeterli.
+
+**Relative Locators'a Selenium 4 ile birlikte bir web elementi direkt locate edemediğimiz zamanlarda o web elementi etrafındaki
+web elementlerin referansı ile tarif edebiliriz.(Aslında uzun yol)
+Bunu nasıl yapıyorruz. Öncelikle bildiklerimizi locate ediyoruz,nu ikisini kullanarak başkalarını locate edebilirz.
+
+Example:
+WebElement boston=driver.findElement(By.id("boston"));
+WebElement sailor=driver.findElement(By.id("sailor"));
+
+WebElement berlin=driver.findElement(RelativeLocator.with(By.tagName("li")).above(sailor).toRightOf(boston));
+WebElement berlin=driver.findElement(RelativeLocator.with(By.className("ui-li-has-thumb")).below(boston));
