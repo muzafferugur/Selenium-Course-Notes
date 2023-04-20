@@ -1,0 +1,34 @@
+*****By.xpath()*****
+1-)Bir web elementini locate etmenin en etkin methodudur.
+2-)WebElement passwordTextBox=driver.findElement(By.xpath("xpath"));
+Methodun yazımı açısından diğer 6 yöntemle aynı olmakla beraber xpath'i diğerlerinden ayıran çok önemlibir fark vardır.
+-Diğer 6 method HTML koduna bağlıdır.Web elementin kodunda id yoksa By.id() methodunu, web element
+link değilse By.linkText() methodunu kullanamazsınız.
+-Xpath ise dinamiktir.Her türlü web eleemnti için mutlaka bir xpath yazılabilir.
+Xpath kendi içinde 2 ye ayrılır.
+ı.Absolute xpath(mutlak)
+ıı.Relative xpath(bağıl)
+
+*****Absolute Xpath*****(Bu xpath yolu çk kullanılmıyor.Tavsiye edilmiyor.)
+1-)Absolute xpath yazmak için en başa // sonraki her adımda / yazarak hedef web elemente kadar tüm taglar yazılır.(Example://div/table/tbody)
+2-)Eğer aynı path'e sahip birden fazla element varsa index kullanılabilir. [2] gibi.(Example://tbody/tr/td[3]/a/span)
+3-)Eğer bir parent'in grand child'ları içinde unique bir tag varsa parent // grand child yazılabilir.
+
+*****Relative Xpath*****(Ençok kullanılan)
+1-)Bir web eement'te temel olarak 3 bileşen vardır.Relative xpath bu üçünün ortak unique olanını bularak çalışır.
+ı.tag name--input
+ıı.attribute--type,id,value,name,placeholder,class
+ııı.attribute value--type->'text', id->'twotabsearchtextbox'...
+
+2-)Relative xpath yazmak için bu 3 bileşen bir araya getirilir, unique sonuç veren her relative xpath kullanılabilir.
+yazım şekli -->//tagname[@attributeIsmi='attributeValue']
+
+3-)Genelde 3 bileşen kullanılır fakat bazen daha da azını yazmak yeterli olabilir.(Her zaman 3'lü yapmak zorunda değiliz..)
+
+--Sadece tagname kullanarak xpath yazmak-->driver.findElement(By.xpath(""//input"));
+
+--Tag name farketmeksizin attribute ismi ve attribute value kullanarak xpath yazmak
+-->driver.findElement(By.xpath(""//*[@type='text']"));-->tagname yerine (*) koymak yeterli.
+
+--Attribute name farketmeksizin tagname ve attribute value kullanarak xpath yazmak
+-->driver.findElement(By.xpath(""//input[@*='text']"));-->AttributeIsmi yerine (*) koymak yeterli.

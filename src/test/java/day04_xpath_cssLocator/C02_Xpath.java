@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class C02_Xpath {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         /*
         1- "https://the-internet.herokuapp.com/add_remove_elements/" adresine gidin
@@ -38,6 +38,7 @@ public class C02_Xpath {
         } else System.out.println("deleteButton testi FAILED");
 
         // Delete tuşuna basın
+        Thread.sleep(3000);
         deleteButton.click();
 
         //"Add/Remove Elements yazısının görünür olduğunu test edin
@@ -48,6 +49,7 @@ public class C02_Xpath {
 
         } else System.out.println("Add/Remove Elements yazısı testi FAILED");
 
+        Thread.sleep(3000);
         driver.close();
 
 
