@@ -20,10 +20,10 @@ public class C04_RelativeXpath {
         driver.get("https://www.diemol.com/selenium-4-demo/relative-locators-demo.html");
 
         //sayfadaki berlin webelementini relative locator kullanarak tıklayalım
-        WebElement bostonWE= driver.findElement(By.id("pid6_thumb"));
-        WebElement sailorWE= driver.findElement(By.id("pid11_thumb"));
+        WebElement bostonWE = driver.findElement(By.id("pid6_thumb"));
+        WebElement sailorWE = driver.findElement(By.id("pid11_thumb"));
 
-        WebElement mountie= driver.findElement(RelativeLocator.with(By.tagName("img")).below(bostonWE).toLeftOf(sailorWE));
+        WebElement mountie = driver.findElement(RelativeLocator.with(By.tagName("img")).below(bostonWE).toLeftOf(sailorWE));
         mountie.click();
 
         System.out.println(mountie.getAttribute("id"));//pid10_thumb

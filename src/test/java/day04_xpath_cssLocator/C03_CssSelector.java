@@ -24,8 +24,8 @@ NOT: cssSelector kullanarak elementleri locate ediniz.
 */
 
 
-        System.setProperty("webdriver.chrome.driver","src/drivers/chromedriver.exe");
-        WebDriver driver=new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "src/drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
@@ -33,13 +33,13 @@ NOT: cssSelector kullanarak elementleri locate ediniz.
         driver.get("http://a.testaddressbook.com/sign_in");
 
         //b. Locate email textbox
-        WebElement email= driver.findElement(By.cssSelector("#session_email"));
+        WebElement email = driver.findElement(By.cssSelector("#session_email"));
 
-      //c. Locate password textbox ve
-        WebElement password= driver.findElement(By.cssSelector("#session_password"));
+        //c. Locate password textbox ve
+        WebElement password = driver.findElement(By.cssSelector("#session_password"));
 
         //   d. Locate signin button
-        WebElement signin= driver.findElement(By.cssSelector("input[name='commit']"));
+        WebElement signin = driver.findElement(By.cssSelector("input[name='commit']"));
         Thread.sleep(3000);
 
         ////   e. Asagidaki kullanıcı adını ve şifreyi girin ve sign in düğmesini tıklayın
