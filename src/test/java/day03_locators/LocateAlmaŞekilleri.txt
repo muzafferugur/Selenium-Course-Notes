@@ -15,6 +15,7 @@ findElement() locator değerine uygun bir tane webelementi döndürür.Dönmezse
 findElements() locator değerine uygun webelementlerin listesini döndürür.Eşleşen yoksa boş liste döndürür. "NoSuchElentException" hatası fıydırmaz.
 
 **WebElement "Is" Methodları** is olduğu için boolean sonuçlar döndürecekler
+
 1-)webElement.isEnable()-->Web element erişilebilir ise true yoksa false
 2-)webElement.isSelected()-->Web element seçili ise true yoksa false
 3-)webElement.isDisplayed()-->Web element görünür ise true yoksa false
